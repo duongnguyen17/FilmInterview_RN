@@ -1,5 +1,5 @@
+import { CommonActions, NavigationContainerRef } from '@react-navigation/native'
 import React from 'react'
-import { CommonActions, NavigationContainerRef, StackActions } from '@react-navigation/native'
 import { NavigationServiceConfig } from '../type'
 
 /**
