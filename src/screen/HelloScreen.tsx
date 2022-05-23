@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 22,
-        color: "balck",
+        color: "black",
         fontWeight: '600',
     },
     body: {

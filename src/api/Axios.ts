@@ -11,21 +11,23 @@ const Axios = axios.create({
 
 
 Axios.interceptors.request.use(
-    async function (config) {
+    (config) => {
         console.log(`[START][${config.url}]`)
         return config;
-    },
-    function (error) {
+    }
+    ,
+    (error) => {
         return Promise.reject(error);
     }
 );
 
-Axios.interceptors.response.use((response) => {
-    console.log(`[END][${response.config.url}]`)
-    console.log(response)
-    return response;
-}, (error) => {
-    return Promise.reject(error);
-});
+Axios.interceptors.response.use(
+    (response) => {
+        console.log(`[END][${response.config.url}]`)
+        console.log(response)
+        return response;
+    }, (error) => {
+        return Promise.reject(error);
+    });
 
 export default Axios;
